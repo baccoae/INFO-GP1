@@ -15,17 +15,15 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lanterne_pourpre' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'lanterne_pourpre' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'lanterne_pourpre' ), 'lanterne_pourpre', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			<section id="footer-top">
+				<?php dynamic_sidebar( 'footer-top' ); ?>
+			</section>
+			<section id="footer-bot">
+				<?php dynamic_sidebar( 'footer-bot' ); ?>
+			</section>
+			<section id="footer-footer">
+				<?php dynamic_sidebar( 'footer-footer'); ?>
+			</section>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
@@ -34,3 +32,4 @@
 
 </body>
 </html>
+
