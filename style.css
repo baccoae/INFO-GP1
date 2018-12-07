@@ -983,3 +983,86 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/* ------ PARTIE DE THEO -------*/
+/* Il y aura très certainement les noms des classe et id a changé mais l'idée est la onb verra ensuite */
+
+#clear{
+	clear : both;
+}
+/* Footer globale */
+#colophon{
+	background-color : #FFF3ED;
+	padding : 0;
+	margin : 0;
+}
+#colophon a{
+	color : black;
+	text-decoration : none;
+}
+#colophon #text-7 a{
+	color : white;
+}
+/* Footer top */
+#text-6{
+	margin : -5px;
+	background-image : url("img/map_grande.png");
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+	background-position: center center;
+	padding : 30px;
+}
+#text-6 a{
+	font-size : 75%;
+	font-style : italic;
+	font-weight : bold;
+	color : white;
+	text-decoration : none;
+	padding : 5px;
+	padding-left: 45px;
+	padding-right: 45px;
+	background-color : #b15754;
+	border-radius : 25px 25px;
+}
+#text-6 p{
+	text-align : center;
+}
+/* Footer-bot */
+
+[id="footer-bot"] {
+	display:flex;
+	justify-content:space-between;
+	margin-top : 50px;
+	width : 80%;
+	margin-left : 10%;
+	margin-right : 10%;
+}
+
+[id="footer-bot"] [id="media_image-2"] {
+	width : 100px;
+}
+
+[id="footer-bot"] [id="text-7"] p {
+	position : absolute;
+	right : 10%;
+	border-radius : 25px 25px;
+	background-color : #DDCE75;
+	width : 200px;
+	text-align : center;
+	margin-top : 25px;
+	font-style : italic;
+	font-weight : bold;
+}
+
+[id="footer-footer"]{
+	padding-right : 30%;
+	padding-left : 30%;
+	display : flex;
+	justify-content:space-between;
+	color : white;
+	background-color : #5E5E5E;
+}
+
+[id="footer-footer"] p{
+	height : 0px;
+}
