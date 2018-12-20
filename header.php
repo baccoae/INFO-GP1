@@ -13,10 +13,10 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>"> <!--Pour le dinamique - On peut changer l'utf sur wp/admin-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -27,14 +27,42 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+			the_custom_logo(); //le logo -> si on clique dessus, il renvoit vers le home.php (?)
+			if ( is_front_page() && is_home() ) : //affichage sur la page d'accueil
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lanterne_pourpre' ); ?></button>
 				<?php
-			else :
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+				</nav><!-- #site-navigation -->
+				<div class="icons">
+					<a href="#"><i class="material-icons">account_circle</i></a>
+					<a href="#"><i class="material-icons">favorite</i></a>
+					<a href="#"><i class="material-icons">notifications</i></a>
+				</div>
+				<?php
+			else : //affichage sur toutes les autres pages
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lanterne_pourpre' ); ?></button>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+				</nav><!-- #site-navigation -->
+				<div class="icons">
+					<a href="#"><i class="material-icons">account_circle</i></a>
+					<a href="#"><i class="material-icons">favorite</i></a>
+					<a href="#"><i class="material-icons">notifications</i></a>
+				</div>
 				<?php
 			endif;
 			$lanterne_pourpre_description = get_bloginfo( 'description', 'display' );
@@ -44,15 +72,10 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lanterne_pourpre' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+<!-- MON ESSAI
+		<div class="haut">
+		<div class="logo"><img alt="logo agence" class="header-image" src="/img/logo.jpg"></div>   Voir le code CSS pour le positionnement-->
+			
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
