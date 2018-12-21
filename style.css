@@ -984,8 +984,7 @@ object {
 	display: block;
 }
 
-/* ------ PARTIE DE THEO -------*/
-/* Il y aura très certainement les noms des classe et id a changé mais l'idée est la onb verra ensuite */
+/* ------ PARTIE DE CAPELLITO -------*/
 
 #clear{
 	clear : both;
@@ -995,6 +994,7 @@ object {
 	background-color : #FFF3ED;
 	padding : 0;
 	margin : 0;
+	margin-top : 50px;
 }
 #colophon a{
 	color : black;
@@ -1004,7 +1004,7 @@ object {
 	color : white;
 }
 /* Footer top */
-#text-6{
+#colophon #text-6{
 	margin : -5px;
 	background-image : url("img/map_grande.png");
 	background-size:     cover;                      /* <------ */
@@ -1012,7 +1012,7 @@ object {
 	background-position: center center;
 	padding : 30px;
 }
-#text-6 a{
+#colophon #text-6 a{
 	font-size : 75%;
 	font-style : italic;
 	font-weight : bold;
@@ -1024,7 +1024,7 @@ object {
 	background-color : #b15754;
 	border-radius : 25px 25px;
 }
-#text-6 p{
+#colophon #text-6 p{
 	text-align : center;
 }
 /* Footer-bot */
@@ -1066,3 +1066,4 @@ object {
 [id="footer-footer"] p{
 	height : 0px;
 }
+
