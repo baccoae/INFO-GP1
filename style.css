@@ -1067,3 +1067,40 @@ object {
 	height : 0px;
 }
 
+/********* mise en forme des estimations ********************/
+.form-group{
+	width:75%;
+	margin:auto;
+}
+input[type='button'].select-btn {
+	color:red;
+
+}
+.ln{
+	margin:10px 35%;
+}
+.pro{
+	background-color: #DDCE75;
+	color:white;
+}
+.btn{
+	margin:0px 10px 0px 10px;
+	width:100px;
+	height:45px;
+}
+
+input[type='button'].part{
+	background-color: #DDCE75;
+	color:white;
+}
+#adresse{
+	width:100%;
+	margin:10px;
+}
+#meub{
+	width:25%;
+	display:unset;
+}
+.nb{
+	width:85px;
+}
